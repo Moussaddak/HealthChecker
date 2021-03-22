@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HealthChecker</string>
+    <string name="btn_one">first_choice</string>
+    <string name="btn_two">second choice</string>
+    <string name="btn_three">third_choice</string>
+    <string name="txt_score">score</string>
+    <string name="txt_question">Question</string>
+    <string name="output">TextView</string>
+    <string name="btn_exit">Exit</string>
+</resources>

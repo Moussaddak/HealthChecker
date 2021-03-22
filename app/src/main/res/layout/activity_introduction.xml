@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Introduction">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:padding="24dp"
+        android:text="Hello !"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="365dp"
+        android:padding="24dp"
+        android:text="You are about to take a short (3 minutes), secure and anonymous health exam. Your responses will be carefully analyzed and you will discover the possible causes of your symptoms."
+        android:textSize="19dp" />
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="650dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="310dp"
+        android:layout_height="310dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/covid" />
+
+
+</RelativeLayout>
