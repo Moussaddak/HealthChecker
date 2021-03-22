@@ -72,7 +72,7 @@ public class call190 extends AppCompatActivity {
         startActivity(intent);
     }
     public void call_190(View v){
-        String num = "96605953";
+        String num = "99081619";
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + num));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
