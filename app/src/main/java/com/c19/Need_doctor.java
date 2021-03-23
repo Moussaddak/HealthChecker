@@ -22,24 +22,24 @@ public class Need_doctor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_needdoctor);
         output = (TextView) findViewById(R.id.textView);
-        Log.i("result good: ", String.valueOf(result));
+        Log.i("result good: ", String.valueOf(result)); // debugging msg
         output.setText("you may need to consult with a doctor, Your result is " + (int) result + "%");
         Button btn_exit = findViewById(R.id.button);
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("button clicked", "ok");
+                Log.i("button clicked", "ok"); // debugging msg
                 AlertDialog.Builder builder = new AlertDialog.Builder(Need_doctor.this);
                 builder.setTitle("Do you want to exit?")
-                        .setMessage("click yes to exit or no to start again")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setMessage("click Yes to exit or No to start again")
+                        .setPositiveButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Log.i("Yes clicked", "ok");
+                                Log.i("No clicked", "ok"); // debugging msg
                                 openActivity();
                             }
                         })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 finishAffinity();

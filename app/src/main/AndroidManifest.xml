@@ -21,7 +21,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Goodhealth" />
         <activity android:name=".Need_doctor" />
-        <activity android:name=".call190" />
+        <activity android:name=".Call190" />
     </application>
 
 </manifest>

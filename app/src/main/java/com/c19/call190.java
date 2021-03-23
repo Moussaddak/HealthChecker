@@ -19,7 +19,7 @@ import androidx.core.app.ActivityCompat;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
-public class call190 extends AppCompatActivity {
+public class Call190 extends AppCompatActivity {
     TextView output;
     float result = MainActivity.getScore();
     Snackbar mySnackbar;
@@ -30,24 +30,24 @@ public class call190 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call190);
         output = (TextView) findViewById(R.id.textView);
-        Log.i("result good: ", String.valueOf(result));
-        output.setText("Please stay home, isolate yourself and call 190, Your result is " + (int) result + "%");
+        Log.i("result good: ", String.valueOf(result)); // debugging msg
+        output.setText("Please Stay Home, Isolate yourself and Call 190, Your result is " + (int) result + "%");
         Button btn_exit = findViewById(R.id.button);
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("button clicked", "ok");
-                AlertDialog.Builder builder = new AlertDialog.Builder(call190.this);
+                Log.i("button clicked", "ok"); // debugging msg
+                AlertDialog.Builder builder = new AlertDialog.Builder(Call190.this);
                 builder.setTitle("Do you want to exit?")
-                        .setMessage("click yes to exit or no to start again")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setMessage("Click Yes to exit or No to start again")
+                        .setPositiveButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Log.i("Yes clicked", "ok");
+                                Log.i("No clicked", "ok");
                                 openActivity();
                             }
                         })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 finishAffinity();
@@ -72,11 +72,11 @@ public class call190 extends AppCompatActivity {
         startActivity(intent);
     }
     public void call_190(View v){
-        String num = "99081619";
+        String num = "99081619"; // number to Call N°190
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + num));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            mySnackbar = Snackbar.make(v, "Please grant call permission first", BaseTransientBottomBar.LENGTH_SHORT);
+            mySnackbar = Snackbar.make(v, "Please Grant Call Permission In Phone Settings", BaseTransientBottomBar.LENGTH_SHORT);
             mySnackbar.show();
             return;
         }

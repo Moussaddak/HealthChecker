@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-        Log.i("itr: ", String.valueOf(iteration));
+        Log.i("itr: ", String.valueOf(iteration)); // debugging msg
         switch (v.getId()) {
             case R.id.btn_one:
                 if (btn_one.getText() == question.choices[iteration][0]) {
@@ -77,12 +77,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
         iteration++;
-        Log.i("score exe: ", String.valueOf(tmp));
+        Log.i("score exe: ", String.valueOf(tmp)); // debugging msg
         if (iteration == questionLength) {
             iteration = 0;
-
-            Log.i("itr if: ", String.valueOf(iteration));
-            Log.i("score if b: ", String.valueOf(score));
+            Log.i("itr if: ", String.valueOf(iteration)); // debugging msg
+            Log.i("score if b: ", String.valueOf(score)); // debugging msg
             score = tmp;
             GameOver(score);
             tmp = 100;
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void GameOver(float score) {
-        Log.i("gameover: ", String.valueOf(score));
+        Log.i("gameover: ", String.valueOf(score)); // debugging msg
         if (score >= 80) {
             Intent intent = new Intent(this, Goodhealth.class);
             startActivity(intent);
@@ -99,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this, Need_doctor.class);
             startActivity(intent);
         } else {
-            Intent intent = new Intent(this, call190.class);
+            Intent intent = new Intent(this, Call190.class);
             startActivity(intent);
         }
     }
