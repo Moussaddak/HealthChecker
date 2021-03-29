@@ -7,14 +7,6 @@
     tools:context=".Goodhealth">
 
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="266dp"
-        android:layout_height="306dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/need_a_doctor" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -24,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/output"
         android:textAlignment="center"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button"
@@ -36,14 +28,20 @@
         android:textAlignment="center"
         android:textSize="25sp" />
 
-    <Button
-        android:id="@+id/btn_call"
+    <ImageView
+        android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:text="Call 190"
-         />
+        app:srcCompat="@drawable/testing"
+        />
+
+    <ImageView
+        android:id="@+id/btn_call"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="595dp"
+        app:srcCompat="@drawable/phonepic" />
+
 
 </RelativeLayout>

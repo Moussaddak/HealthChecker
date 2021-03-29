@@ -10,19 +10,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 
 public class Call190 extends AppCompatActivity {
+    private static final int REQUEST_PHONE_CALL = 1;
     TextView output;
     float result = MainActivity.getScore();
-    Snackbar mySnackbar;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -36,14 +37,12 @@ public class Call190 extends AppCompatActivity {
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("button clicked", "ok"); // debugging msg
                 AlertDialog.Builder builder = new AlertDialog.Builder(Call190.this);
                 builder.setTitle("Do you want to exit?")
                         .setMessage("Click Yes to exit or No to start again")
                         .setPositiveButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Log.i("No clicked", "ok");
                                 openActivity();
                             }
                         })
@@ -57,7 +56,7 @@ public class Call190 extends AppCompatActivity {
                 alert.show();
             }
         });
-        Button btn_call;
+        ImageView btn_call;
         btn_call = findViewById(R.id.btn_call);
         btn_call.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,22 +66,23 @@ public class Call190 extends AppCompatActivity {
         });
 
     }
+
     private void openActivity() {
         Intent intent = new Intent(this, Note.class);
         startActivity(intent);
     }
-    public void call_190(View v){
-        String num = "99081619"; // number to Call N°190
+
+    public void call_190(View v) {
+        String num = "190"; // number to Call N°190
         Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:" + num));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            mySnackbar = Snackbar.make(v, "Please Grant Call Permission In Phone Settings", BaseTransientBottomBar.LENGTH_SHORT);
-            mySnackbar.show();
-            return;
+        //intent.setData(Uri.parse("tel:" + num));
+        if (ContextCompat.checkSelfPermission(Call190.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(Call190.this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    REQUEST_PHONE_CALL);
+        } else {
+            startActivity(intent.setData(Uri.parse("tel:" + num)));
         }
-        startActivity(intent);
     }
-
-
 }
-

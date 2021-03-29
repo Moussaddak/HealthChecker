@@ -23,7 +23,7 @@ public class Need_doctor extends AppCompatActivity {
         setContentView(R.layout.activity_needdoctor);
         output = (TextView) findViewById(R.id.textView);
         Log.i("result good: ", String.valueOf(result)); // debugging msg
-        output.setText("you may need to consult with a doctor, Your result is " + (int) result + "%");
+        output.setText("You may need to consult with a doctor, Your result is " + (int) result + "%");
         Button btn_exit = findViewById(R.id.button);
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +31,7 @@ public class Need_doctor extends AppCompatActivity {
                 Log.i("button clicked", "ok"); // debugging msg
                 AlertDialog.Builder builder = new AlertDialog.Builder(Need_doctor.this);
                 builder.setTitle("Do you want to exit?")
-                        .setMessage("click Yes to exit or No to start again")
+                        .setMessage("Click Yes to exit or No to start again")
                         .setPositiveButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {

@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Need_doctor">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="266dp"
-        android:layout_height="306dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/doctor" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -23,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/output"
         android:textAlignment="center"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -33,5 +25,13 @@
         android:text="@string/btn_exit"
         android:textAlignment="center"
         android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="398dp"
+        android:layout_height="609dp"
+        android:layout_alignTop="@+id/button"
+        android:layout_marginTop="-620dp"
+        app:srcCompat="@drawable/doct" />
 
 </RelativeLayout>

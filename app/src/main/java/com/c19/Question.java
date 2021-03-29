@@ -15,7 +15,7 @@ public class Question {
     };
 
     public String[][] choices = {
-            {"Above 38,0° degree", "37,0° degree", " 38,0° degree"},
+            {"37,0° degree", "38,0° degree", "Above 38,0° degree"},
             {"Yes", "No", "I don't know"},
             {"Yes", "No", "I don't know"},
             {"Yes", "No", "I don't know"},

@@ -7,24 +7,16 @@
     tools:context=".Goodhealth">
 
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="266dp"
-        android:layout_height="306dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/healthy" />
-
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView3"
         android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
         android:text="@string/output"
         android:textAlignment="center"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button"
@@ -35,4 +27,10 @@
         android:text="@string/btn_exit"
         android:textAlignment="center"
         android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/groupe" />
 </RelativeLayout>
